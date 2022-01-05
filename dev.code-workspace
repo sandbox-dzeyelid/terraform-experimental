@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "[root]",
+			"path": "."
+		},
+		{
+			"path": "./20220103"
+		}
+	],
+	"settings": {
+		"debug.internalConsoleOptions": "neverOpen"
+	}
+}

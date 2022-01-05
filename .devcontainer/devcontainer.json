@@ -10,11 +10,16 @@
 	},
 
 	// Set *default* container specific settings.json values on container create.
-	"settings": {},
+	"settings": {
+		"python.defaultInterpreterPath": "/usr/local/python/bin/python"
+	},
 
 
 	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [],
+	"extensions": [
+		"ms-azuretools.vscode-azurefunctions",
+		"ms-vscode.azure-account"
+	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
@@ -26,6 +31,7 @@
 	"remoteUser": "vscode",
 	"features": {
 		"terraform": "latest",
-		"azure-cli": "latest"
+		"azure-cli": "latest",
+		"python": "3.9"
 	}
 }
