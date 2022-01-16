@@ -1,11 +1,7 @@
 {
 	"folders": [
 		{
-			"name": "[root]",
-			"path": "."
-		},
-		{
-			"path": "./20220103"
+			"path": "./samples/apple"
 		}
 	],
 	"settings": {
