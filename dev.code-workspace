@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "./samples/apple"
+		}
+	],
+	"settings": {
+		"debug.internalConsoleOptions": "neverOpen"
+	}
+}
