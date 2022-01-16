@@ -11,10 +11,6 @@ variable "shared_mssql_server_name" {
   type = string
 }
 
-variable "shared_key_vault_name" {
-  type = string
-}
-
 variable "shared_mssql_server_administrator_login_name" {
   type = string
 }
