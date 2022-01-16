@@ -2,23 +2,40 @@
 
 ## 概要
 
-- section モジュール（section ごと）
-  - resource group
+このディレクトリ配下にある Terraform のスクリプトは、下記のリソース群を構成しています。
+
+| ディレクトリ | 説明 |
+|----|----|
+| `initialization` | 共有リソースを再現するスクリプト群 |
+| `deploy-section` | セクションごとのリソースを扱うスクリプト群 |
+
+![構成図](./docs/images/composition.png)
+
+### 共有リソースを再現する `initialization`
+
+共有リソースとして、下記のリソースを配置します。
+
+- 共有用 resource group
+  - sql server
+
+### セクションごとのリソースを扱う `deploy-section`
+
+セクションごとに配置されるリソースを扱います。
+
+- セクション用 resource group
   - function app (linux/python)
   - blob storage
-  - data factory *
-  - logic app *
-
-- shared
-  - resource group (data)
-  - sql server (data)
-    - sql database (section ごと)
+  - data factory
+  - logic app
+- 共有用 resource group (参照)
+  - sql database (共有の SQL Server 配下に配置する)
 
 ## 展開手順
 
 - Azure CLI でログインする
 - 共有リソースを展開する
 - セクション単位のリソースを展開する
+- リソースを削除する
 
 ### Azure CLI でログインする
 
