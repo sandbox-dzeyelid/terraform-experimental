@@ -15,15 +15,13 @@ variable "sections" {
   type = list(object({
     name                = string
     resource_identifier = string
+    github_configuration = object({
+      account_name    = string
+      branch_name     = string
+      git_url         = string
+      repository_name = string
+      root_folder     = string
+    })
   }))
-  default = [
-    {
-      name                = "apple"
-      resource_identifier = "identifier-apple"
-    },
-    {
-      name                = "lemon"
-      resource_identifier = "identifier-lemon"
-    }
-  ]
+  default = []
 }

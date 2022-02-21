@@ -24,8 +24,9 @@ module "section" {
 
   for_each = local.sections
 
-  resource_identifier                             = each.value.resource_identifier
-  shared_resource_group_name                      = var.shared_resource_group_name
-  shared_mssql_server_name                        = var.shared_mssql_server_name
+  resource_identifier                              = each.value.resource_identifier
+  shared_resource_group_name                       = var.shared_resource_group_name
+  shared_mssql_server_name                         = var.shared_mssql_server_name
   shared_mssql_server_administrator_login_password = var.shared_mssql_server_administrator_login_password
+  azure_data_factory_github_configurations         = [each.value.github_configuration]
 }
