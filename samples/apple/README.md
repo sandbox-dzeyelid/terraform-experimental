@@ -30,6 +30,12 @@
 - 共有用 resource group (参照)
   - sql database (共有の SQL Server 配下に配置する)
 
+## 事前準備
+
+ソース管理用の GitHub 統合を利用します。ソースコードを管理するためのリポジトリをご用意ください。
+
+詳細は、[ソース管理 - Azure Data Factory | Microsoft Docs](https://docs.microsoft.com/ja-jp/azure/data-factory/source-control) をご参考ください。
+
 ## 展開手順
 
 - Azure CLI でログインする
@@ -139,6 +145,13 @@ sections = [
   {
     name       = "<セクション識別用の文字列>"
     resource_identifier = "<リソースに対するセクション識別用の文字列>"
+    github_configuration = {
+      account_name    = "<GitHub のアカウント名、または Organization 名>"
+      branch_name     = "<コラボレーション ブランチの名前>"
+      git_url         = "<リポジトリのURL>"
+      repository_name = "<リポジトリ名>"
+      root_folder     = "<ルート フォルダー>"
+    }
   }
 ]
 ```
